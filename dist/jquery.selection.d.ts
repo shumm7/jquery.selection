@@ -1,5 +1,5 @@
 declare module "jquery.selection";
-export interface JQuerySelection extends JQuery {
+export interface JQuery {
     /**
      * ## .selection('replace', opts)
      * 選択文字列を置き換えます
@@ -13,7 +13,7 @@ export interface JQuerySelection extends JQuery {
     selection(mode: "replace", opts?: {
         text?: string;
         caret?: "keep" | "start" | "end";
-    }): JQuery<HTMLElement>;
+    }): JQuery;
     /**
      * ## .selection('insert', opts)
      * 選択文字列の前、もしくは後に文字列を挿入します
@@ -32,7 +32,7 @@ export interface JQuerySelection extends JQuery {
         text?: string;
         mode?: "before" | "after";
         caret?: "keep" | "start" | "end";
-    }): JQuery<HTMLElement>;
+    }): JQuery;
     /**
      * ## .selection('get')
      * 選択されている文字列を取得します
@@ -59,7 +59,7 @@ export interface JQuerySelection extends JQuery {
     selection(mode: "setPos", opts?: {
         start?: number;
         end?: number;
-    }): JQuery<HTMLElement>;
+    }): JQuery;
     /**
      * ## jQuery.selection(mode)
      * ウィンドウ内の選択されている文字列を取得します

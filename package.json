@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "npm run compile && npm run bundle",
+    "build": "npm run compile",
     "compile": "tsc --project tsconfig.json",
     "bundle": "rollup -c"
   },
