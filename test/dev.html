@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>jQuery.selection Test</title>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="../src/jquery.selection.js"></script>
+</head>
+<body>
+
+<ul>
+    <input type="text" class="field">
+    <button type="button" id="button">テスト</button>
+    <div id="log"></div>
+    <script>
+        function log(text){
+            console.log(text)
+            var e = $(`<p>`)
+            e.text(text)
+            $("#log").append(e)
+        }
+        function errorlog(text){
+            console.warn(text)
+            var e = $(`<p style="color:red">`)
+            e.text(text)
+            $("#log").append(e)
+        }
+
+        $("#button").on("click", function(e){
+            try{
+                console.log($(".field").selection("replace", {}))
+            }catch(e){
+                errorlog(e)
+            }
+        })
+    </script>
+</ul>
+
+</body>
+</html>

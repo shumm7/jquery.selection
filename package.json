@@ -1,20 +1,34 @@
 {
   "name": "@shumm7/jquery.selection",
   "version": "0.0.1",
-  "description": "jQuery.selection for modern JS",
-  "main": "index.js",
+  "description": "selection text/caret operation - jQuery pulgin",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json"
+    "build": "tsc --project tsconfig.json"
   },
-  "keywords": [],
-  "author": "shummg",
+  "keywords": ["selection", "caret"],
+  "author": {
+        "name": "Koji Iwasaki",
+        "url": "http://blog.madapaja.net"
+  },
+  "contributors": [
+    {
+      "name": "shumm7",
+      "url": "https://github.com/shumm7"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcintabaka/jquery.selection.git"
+  },
   "license": "MIT",
-  "homepage": "https://github.com/shumm7/jquery.selection.ts",
-  "dependencies": {
-    "jquery": "^3.7.1"
+  "homepage": "https://madapaja.github.io/jquery.selection/ja_jp.html",
+  "docs": "https://github.com/madapaja/jquery.selection/wiki",
+  "bugs": "https://github.com/shumm7/jquery.selection/issues",
+  "peerDependencies": {
+    "jquery": ">=1.7.0"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.31",
