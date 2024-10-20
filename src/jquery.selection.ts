@@ -1,10 +1,18 @@
 /*!
  * jQuery.selection - jQuery Plugin
  *
+ * Copyright (c) 2024 しゅう (@shumm7).
+ * 
+ * The major design pattern of this plugin was abstracted from Koji Iwasaki
+ * (@madapaja)'s jQuery.selection (https://github.com/madapaja/jquery.selection),
+ * which is subject to the same license. Here is the original copyright
+ * notice for jQuery.selection:
+ * 
+ * 
  * Copyright (c) 2010-2014 IWASAKI Koji (@madapaja).
  * http://blog.madapaja.net/
  * Under The MIT License
- *
+ * 
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the
  * "Software"), to deal in the Software without restriction, including
