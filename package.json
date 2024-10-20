@@ -2,6 +2,8 @@
   "name": "@shumm7/jquery.selection",
   "version": "0.0.1",
   "description": "selection text/caret operation - jQuery pulgin",
+  "types": "dist/jquery.selection.d.ts",
+  "module": "dist/jquery.selection.d.ts.map",
   "directories": {
     "test": "test"
   },

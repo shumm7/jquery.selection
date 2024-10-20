@@ -1,3 +1,4 @@
+declare module "jquery.selection";
 /*!
  * jQuery.selection - jQuery Plugin
  *
@@ -32,7 +33,7 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-declare module "jquery.selection";
+
 import jQuery from "jquery";
 
 type JQuerySelection_Element = HTMLInputElement
@@ -419,8 +420,6 @@ export interface JQuerySelection extends JQuery {
                 default:
                     return JQuerySelection_CaretOperation.getText(this[0] as JQuerySelection_Element);
             }
-
-            return this;
         }
     });
 })(jQuery, window, window.document);
