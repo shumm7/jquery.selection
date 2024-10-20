@@ -6,8 +6,8 @@
   "types": "dist/esm/jquery.selection.d.ts",
   "module": "dist/esm/jquery.selection.js",
   "scripts": {
-    "build": "npm run compile && npm run bundle",
-    "compile": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json",
+    "build": "npm run compile",
+    "compile": "tsc --project tsconfig.esm.json && tsc --project tsconfig.esm.d.json && tsc --project tsconfig.cjs.json",
     "bundle": "rollup -c rollup.config.esm.js"
   },
   "keywords": [

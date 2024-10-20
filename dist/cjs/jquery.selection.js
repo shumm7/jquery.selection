@@ -1,4 +1,8 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
 /*!
  * jQuery.selection - jQuery Plugin
  *
@@ -33,12 +37,8 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
 const jquery_1 = __importDefault(require("jquery"));
-let $ = jquery_1.default;
+require("./jquery.selection.type");
 let win = window;
 let doc = window.document;
 /**
@@ -152,9 +152,9 @@ class JQuerySelection_CaretOperation {
      * @param   {JQuerySelection_Caret}   caret           caret mode: any of the following: "keep" | "start" | "end"
      */
     static replace(element, text = "", caret) {
-        var tmp = _getCaretInfo(element), orig = element.value, pos = $(element).scrollTop() ?? 0, range = { start: tmp.start, end: (tmp.start ?? 0) + text.length };
+        var tmp = _getCaretInfo(element), orig = element.value, pos = (0, jquery_1.default)(element).scrollTop() ?? 0, range = { start: tmp.start, end: (tmp.start ?? 0) + text.length };
         element.value = orig.substr(0, tmp.start) + text + orig.substr(tmp.end ?? 0);
-        $(element).scrollTop(pos);
+        (0, jquery_1.default)(element).scrollTop(pos);
         this.setPos(element, range, caret);
     }
     /**
@@ -165,9 +165,9 @@ class JQuerySelection_CaretOperation {
      * @param   {JQuerySelection_Caret}   caret           caret mode: any of the following: "keep" | "start" | "end"
      */
     static insertBefore(element, text = "", caret) {
-        var tmp = _getCaretInfo(element), orig = element.value, pos = $(element).scrollTop() ?? 0, range = { start: (tmp.start ?? 0) + text.length, end: (tmp.end ?? 0) + text.length };
+        var tmp = _getCaretInfo(element), orig = element.value, pos = (0, jquery_1.default)(element).scrollTop() ?? 0, range = { start: (tmp.start ?? 0) + text.length, end: (tmp.end ?? 0) + text.length };
         element.value = orig.substr(0, tmp.start) + text + orig.substr(tmp.start ?? 0);
-        $(element).scrollTop(pos);
+        (0, jquery_1.default)(element).scrollTop(pos);
         this.setPos(element, range, caret);
     }
     /**
@@ -178,15 +178,15 @@ class JQuerySelection_CaretOperation {
      * @param   {JQuerySelection_Caret}   caret           caret mode: any of the following: "keep" | "start" | "end"
      */
     static insertAfter(element, text = "", caret) {
-        var tmp = _getCaretInfo(element), orig = element.value, pos = $(element).scrollTop() ?? 0, range = { start: tmp.start, end: tmp.end };
+        var tmp = _getCaretInfo(element), orig = element.value, pos = (0, jquery_1.default)(element).scrollTop() ?? 0, range = { start: tmp.start, end: tmp.end };
         element.value = orig.substr(0, tmp.end) + text + orig.substr(tmp.end ?? 0);
-        $(element).scrollTop(pos);
+        (0, jquery_1.default)(element).scrollTop(pos);
         this.setPos(element, range, caret);
     }
 }
 ;
 /* add jQuery.selection */
-$.extend({
+jquery_1.default.extend({
     /**
      * get selected text on the window
      *
@@ -217,7 +217,7 @@ $.extend({
                             range.setStart(anchorNode, sel.anchorOffset);
                             range.setEnd(focusNode, sel.focusOffset);
                         }
-                        return $('<div></div>').append(range.cloneContents()).html();
+                        return (0, jquery_1.default)('<div></div>').append(range.cloneContents()).html();
                     }
                 }
             }
@@ -229,7 +229,7 @@ $.extend({
     }
 });
 /* add selection */
-$.fn.extend({
+jquery_1.default.fn.extend({
     selection: function (mode, opts) {
         opts = opts || {};
         switch (mode) {

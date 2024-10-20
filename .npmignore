@@ -2,5 +2,10 @@
 /src
 /test
 tsconfig.json
+tsconfig.esm.json
+tsconfig.esm.d.json
+tsconfig.cjs.json
 rollup.config.js
+rollup.config.esm.js
+rollup.config.cjs.js
 *.code-workspace
