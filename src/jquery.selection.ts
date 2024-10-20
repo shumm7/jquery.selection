@@ -24,6 +24,7 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+declare module "jquery.selection";
 import jQuery from "jquery";
 
 type JQuerySelection_Element = HTMLInputElement
@@ -164,7 +165,6 @@ export interface JQuerySelection extends JQuery {
          * @return  {JQuerySelection_Number}   return.end      end position for the selection
          */
         static getPos(element: JQuerySelection_Element): JQuerySelection_Range {
-            console.log(element)
             var tmp = _getCaretInfo(element);
             return {start: tmp.start, end: tmp.end};
         }
