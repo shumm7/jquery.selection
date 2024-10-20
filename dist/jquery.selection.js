@@ -100,7 +100,7 @@ import jQuery from "jquery";
             element.focus();
             try {
                 if (element.setSelectionRange) {
-                    element.setSelectionRange(toRange.start ?? null, toRange.end ?? null);
+                    element.setSelectionRange(toRange.start ?? 0, toRange.end ?? 0);
                 }
             }
             catch (e) {
@@ -145,7 +145,7 @@ import jQuery from "jquery";
          * @param   {JQuerySelection_Caret}   caret           caret mode: any of the following: "keep" | "start" | "end"
          */
         static replace(element, text = "", caret) {
-            var tmp = _getCaretInfo(element), orig = element.value, pos = $(element).scrollTop() ?? 0, range = { start: tmp.start, end: tmp.start ?? 0 + text.length };
+            var tmp = _getCaretInfo(element), orig = element.value, pos = $(element).scrollTop() ?? 0, range = { start: tmp.start, end: (tmp.start ?? 0) + text.length };
             element.value = orig.substr(0, tmp.start) + text + orig.substr(tmp.end ?? 0);
             $(element).scrollTop(pos);
             this.setPos(element, range, caret);
