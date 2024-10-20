@@ -100,3 +100,4 @@ declare global {
         selection(mode?: "text" | "html"): string;
     }
 }
+//# sourceMappingURL=jquery.selection.d.ts.map
