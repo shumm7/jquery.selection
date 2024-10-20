@@ -1,0 +1,25 @@
+{
+  "name": "@shumm7/jquery.selection",
+  "version": "0.0.1",
+  "description": "jQuery.selection for modern JS",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json"
+  },
+  "keywords": [],
+  "author": "shummg",
+  "license": "MIT",
+  "homepage": "https://github.com/shumm7/jquery.selection.ts",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.31",
+    "@types/node": "^22.7.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
