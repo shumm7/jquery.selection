@@ -1,4 +1,31 @@
 declare module "jquery.selection";
+export type JQuerySelection_Element = HTMLInputElement;
+export type JQuerySelection_Text = string;
+export type JQuerySelection_Number = number;
+export type JQuerySelection_OperationMode = "replace" | "insert" | "get" | "getPos" | "setPos" | JQuerySelection_SelectionMode;
+export type JQuerySelection_Caret = "keep" | "start" | "end";
+export type JQuerySelection_InsertMode = "before" | "after";
+export type JQuerySelection_SelectionMode = "text" | "html";
+export interface JQuerySelection_Opts {
+    text?: JQuerySelection_Text;
+    caret?: JQuerySelection_Caret;
+    mode?: JQuerySelection_InsertMode;
+    start?: JQuerySelection_Number;
+    end?: JQuerySelection_Number;
+}
+export interface JQuerySelection_ReplaceOpts extends JQuerySelection_Opts {
+    text?: JQuerySelection_Text;
+    caret?: JQuerySelection_Caret;
+}
+export interface JQuerySelection_InsertOpts extends JQuerySelection_Opts {
+    text?: JQuerySelection_Text;
+    mode?: JQuerySelection_InsertMode;
+    caret?: JQuerySelection_Caret;
+}
+export interface JQuerySelection_Range extends JQuerySelection_Opts {
+    start?: JQuerySelection_Number;
+    end?: JQuerySelection_Number;
+}
 declare global {
     interface JQuery {
         /**
@@ -73,5 +100,4 @@ declare global {
         selection(mode?: "text" | "html"): string;
     }
 }
-export {};
 //# sourceMappingURL=jquery.selection.d.ts.map

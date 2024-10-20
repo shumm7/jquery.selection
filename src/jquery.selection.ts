@@ -36,15 +36,15 @@ declare module "jquery.selection";
 
 import jQuery from "jquery";
 
-type JQuerySelection_Element = HTMLInputElement
-type JQuerySelection_Text = string
-type JQuerySelection_Number = number
-type JQuerySelection_OperationMode = "replace"|"insert"|"get"|"getPos"|"setPos"|JQuerySelection_SelectionMode
-type JQuerySelection_Caret = "keep"|"start"|"end"
-type JQuerySelection_InsertMode = "before"|"after"
-type JQuerySelection_SelectionMode = "text"|"html"
+export type JQuerySelection_Element = HTMLInputElement
+export type JQuerySelection_Text = string
+export type JQuerySelection_Number = number
+export type JQuerySelection_OperationMode = "replace"|"insert"|"get"|"getPos"|"setPos"|JQuerySelection_SelectionMode
+export type JQuerySelection_Caret = "keep"|"start"|"end"
+export type JQuerySelection_InsertMode = "before"|"after"
+export type JQuerySelection_SelectionMode = "text"|"html"
 
-interface JQuerySelection_Opts {
+export interface JQuerySelection_Opts {
     text?: JQuerySelection_Text
     caret?: JQuerySelection_Caret
     mode?: JQuerySelection_InsertMode
@@ -52,18 +52,18 @@ interface JQuerySelection_Opts {
     end?: JQuerySelection_Number
 }
 
-interface JQuerySelection_ReplaceOpts extends JQuerySelection_Opts {
+export interface JQuerySelection_ReplaceOpts extends JQuerySelection_Opts {
     text?: JQuerySelection_Text
     caret?: JQuerySelection_Caret
 }
 
-interface JQuerySelection_InsertOpts extends JQuerySelection_Opts {
+export interface JQuerySelection_InsertOpts extends JQuerySelection_Opts {
     text?: JQuerySelection_Text
     mode?: JQuerySelection_InsertMode
     caret?: JQuerySelection_Caret
 }
 
-interface JQuerySelection_Range extends JQuerySelection_Opts {
+export interface JQuerySelection_Range extends JQuerySelection_Opts {
     start?: JQuerySelection_Number
     end?: JQuerySelection_Number
 }
