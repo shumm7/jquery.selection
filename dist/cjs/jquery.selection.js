@@ -1,3 +1,4 @@
+"use strict";
 /*!
  * jQuery.selection - jQuery Plugin
  *
@@ -32,7 +33,11 @@
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-import jQuery from "jquery";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const jquery_1 = __importDefault(require("jquery"));
 (function ($, win, doc) {
     /**
      * get caret status of the selection of the element
@@ -289,4 +294,4 @@ import jQuery from "jquery";
             }
         }
     });
-})(jQuery, window, window.document);
+})(jquery_1.default, window, window.document);

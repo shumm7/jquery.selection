@@ -1,4 +1,3 @@
-declare module "jquery.selection";
 /*!
  * jQuery.selection - jQuery Plugin
  *
@@ -67,7 +66,6 @@ export interface JQuerySelection_Range extends JQuerySelection_Opts {
     start?: JQuerySelection_Number
     end?: JQuerySelection_Number
 }
-
 declare global {
 interface JQuery {
     /** 
