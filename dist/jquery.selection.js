@@ -100,7 +100,7 @@ import jQuery from "jquery";
             element.focus();
             try {
                 if (element.setSelectionRange) {
-                    element.setSelectionRange(toRange.start ?? 0, toRange.end ?? 0);
+                    element.setSelectionRange(toRange.start ?? null, toRange.end ?? null);
                 }
             }
             catch (e) {
