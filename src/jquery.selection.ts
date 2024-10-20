@@ -68,7 +68,8 @@ interface JQuerySelection_Range extends JQuerySelection_Opts {
     end?: JQuerySelection_Number
 }
 
-export interface JQuerySelection extends JQuery {
+declare global {
+interface JQuery {
     /** 
      * ## .selection('replace', opts)
      * 選択文字列を置き換えます
@@ -131,6 +132,7 @@ export interface JQuerySelection extends JQuery {
      * @returns {JQuerySelection_Text} - 選択されている文字列を返します。
      */
     selection(mode?: "text"|"html"): string;
+}
 }
 
 (function($: JQueryStatic, win: Window, doc: Document) {
